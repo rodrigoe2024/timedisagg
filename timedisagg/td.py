@@ -56,7 +56,7 @@ class TempDisagg:
                 break
 
         # filter out the NAs for y and create y_temp
-        nan_mask = np.ones(len(y_check), np.bool)
+        nan_mask = np.ones(len(y_check), bool)
         nan_indexes = np.concatenate([np.arange(n_bc), np.arange(len(y_check) - n_fc, len(y_check), 1)])
         nan_mask[nan_indexes] = 0
 
